@@ -1,0 +1,36 @@
+# Secrets / env
+.env
+.env.*
+*.key
+*.pem
+
+# Laragon / local configs (sesuaikan jika ada)
+config.php
+config/database.php
+
+# Logs & cache
+*.log
+storage/
+cache/
+
+# Composer / Node (kalau ada)
+vendor/
+node_modules/
+
+# Build output (kalau ada)
+dist/
+build/
+
+# OS junk
+.DS_Store
+Thumbs.db
+# App secrets (Raport Digital SMA Al-Ishlah)
+raportalishlah/config.php
+raportalishlah/config/database.php
+raportalishlah/config/
+.local_backup/
+
+# Logs
+raportalishlah/auth/error_log
+raportalishlah/walikelas/error_log
+*.log
