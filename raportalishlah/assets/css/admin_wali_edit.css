@@ -1,0 +1,239 @@
+:root {
+    --ishlah-green: #1b5e20;
+    --ishlah-green-soft: #2e7d32;
+    --ishlah-teal: #00796b;
+    --ishlah-yellow: #ffc107;
+    --ishlah-yellow-soft: #ffe082;
+
+    --bg-body: #f4f7f4;
+    --bg-card: #ffffff;
+    --bg-navbar: linear-gradient(90deg, #1b5e20 0%, #2e7d32 50%, #00796b 100%);
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --text-light: #f9fafb;
+
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
+    --shadow-hero: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    /* Toggle */
+    --toggle-border: #e5e7eb;
+    --toggle-knob-bg: #f9fafb;
+    --toggle-icon-main: #111827;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #f9fff5 0, var(--bg-body) 30%, #eef3ee 70%, #e8f0e8 100%);
+    color: var(--text-main);
+}
+
+.navbar-islah {
+    background: var(--bg-navbar);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: .03em;
+    color: #fff !important;
+}
+
+.brand-text {
+    color: #fff;
+}
+
+.brand-title-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.badge-school {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: .2rem .8rem;
+    font-size: .72rem;
+    color: #e3f2fd;
+}
+
+.logo-placeholder {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    box-shadow: 0 4px 14px rgba(165, 101, 101, 0.18);
+}
+
+.logo-placeholder img.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin-mode-badge {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 3px 10px;           
+    border-radius: 20px;        
+    color: #fff;
+    font-size: 12px;             
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;                    
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.admin-mode-badge i {
+    font-size: 14px;            
+}
+
+.admin-mode-badge:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    cursor: default;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    animation: fadeIn 0.3s;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-body h3 {
+    margin-bottom: 20px;
+    border-left: 4px solid #FFC107;
+    padding-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 4px rgba(13,110,253,0.3);
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.alert {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background: #d1f7e2;
+    border-left: 5px solid #198754;
+}
+
+.alert-danger {
+    background: #ffd7d7;
+    border-left: 5px solid #dc3545;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    background: rgba(255, 193, 7, 0.9);
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+    background: rgba(234, 179, 8, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.14);
+}
+
+.btn-secondary {
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    background: rgba(31, 78, 121, 0.9);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none; 
+    transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(23, 60, 95, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.14);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+

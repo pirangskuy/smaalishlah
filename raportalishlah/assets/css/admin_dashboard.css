@@ -1,0 +1,482 @@
+:root {
+    --ishlah-green: #1b5e20;
+    --ishlah-green-soft: #2e7d32;
+    --ishlah-teal: #00796b;
+    --ishlah-yellow: #ffc107;
+    --ishlah-yellow-soft: #ffe082;
+
+    --bg-body: #f4f7f4;
+    --bg-card: #ffffff;
+    --bg-navbar: linear-gradient(90deg, #1b5e20 0%, #2e7d32 50%, #00796b 100%);
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --text-light: #f9fafb;
+
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
+    --shadow-hero: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    /* Toggle */
+    --toggle-border: #e5e7eb;
+    --toggle-knob-bg: #f9fafb;
+    --toggle-icon-main: #111827;
+}
+
+/* ===== DARK MODE OVERRIDE ===== */
+body.dark {
+    --bg-body: #020617;
+    --bg-card: #020617;
+    --bg-navbar: linear-gradient(90deg, #020617 0%, #020617 50%, #020617 100%);
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --text-light: #e5e7eb;
+
+    --shadow-soft: 0 6px 22px rgba(0, 0, 0, 0.7);
+    --shadow-hero: 0 12px 30px rgba(0, 0, 0, 0.75);
+
+    --toggle-border: #4b5563;
+    --toggle-knob-bg: #0b1120;
+    --toggle-icon-main: #e5e7eb;
+}
+
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #f9fff5 0, var(--bg-body) 30%, #eef3ee 70%, #e8f0e8 100%);
+    color: var(--text-main);
+}
+
+/* Di dark mode body pakai flat */
+body.dark {
+    background: #020617;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar-islah {
+    background: var(--bg-navbar);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: .03em;
+    color: #fff !important;
+}
+
+.brand-text {
+    color: #fff;
+}
+
+.brand-title-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.badge-school {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: .2rem .8rem;
+    font-size: .72rem;
+    color: #e3f2fd;
+}
+
+/* Logo bulat */
+.logo-placeholder {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+
+.logo-placeholder img.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Username kanan */
+.nav-username {
+    font-size: 0.9rem;
+}
+
+/* ===== HERO CARD + STATISTIK ===== */
+
+.hero-card {
+    border: none;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #fdfdf5 45%, #fffde7 100%);
+    box-shadow: var(--shadow-hero);
+}
+
+.hero-ribbon {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: #666;
+}
+
+.section-title-chip {
+    font-size: .75rem;
+    padding: .1rem .7rem;
+    border-radius: 999px;
+    background: var(--ishlah-yellow-soft);
+    color: #795548;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.hero-title {
+    color: var(--text-main);
+}
+
+.hero-title-highlight {
+    color: var(--ishlah-green-soft);
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Badge mode */
+.badge-mode-admin {
+    background: rgba(27, 94, 32, 0.12);
+    color: #1b5e20;
+    border-radius: 999px;
+    padding: .25rem .9rem;
+    font-size: .78rem;
+    border: 1px solid rgba(27, 94, 32, 0.35);
+}
+
+.badge-rapor {
+    background: rgba(255, 193, 7, 0.16);
+    color: #8d6e00;
+    border-radius: 999px;
+    padding: .25rem .9rem;
+    font-size: .78rem;
+    border: 1px solid rgba(255, 193, 7, 0.45);
+}
+
+/* Grid statistik di kanan hero */
+.stats-grid {
+    --bs-gutter-x: 0.5rem;
+    --bs-gutter-y: 0.75rem;
+}
+
+.stat-pill {
+    border-radius: 1rem;
+    background: #f5f5f5;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.stat-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    background: #ffffff;
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: .35rem;
+}
+
+.stat-icon.guru {
+    background: rgba(27, 94, 32, 0.1);
+    color: var(--ishlah-green);
+}
+
+.stat-icon.wali {
+    background: rgba(255, 193, 7, 0.12);
+    color: #ff8f00;
+}
+
+.stat-icon.siswa {
+    background: rgba(0, 150, 136, .12);
+    color: #00796b;
+}
+
+.stat-icon.mapel {
+    background: rgba(103, 58, 183, .10);
+    color: #5e35b1;
+}
+
+/* ===== CARD BAGIAN BAWAH ===== */
+
+.card-section {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: var(--shadow-soft);
+    background: var(--bg-card);
+}
+
+.card-header-islah {
+    background: linear-gradient(90deg, var(--ishlah-green-soft), #43a047);
+    color: #fff;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+.badge-data-utama {
+    font-size: .72rem;
+}
+
+/* Judul blok kecil (Wali kelas, Guru, dll) */
+.section-block-title {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* List dalam card */
+.section-list .list-group-item a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.section-list .list-group-item a:hover {
+    color: #1b5e20;
+}
+
+.shadow-soft {
+    box-shadow: var(--shadow-soft);
+}
+
+/* Footer text */
+.footer-text {
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+/* ===== DARK MODE ADJUST ===== */
+body.dark .hero-card,
+body.dark .card-section,
+body.dark .card.border-0,
+body.dark .list-group-item {
+    background: #020617 !important;
+    color: var(--text-light);
+    box-shadow: var(--shadow-soft);
+}
+
+body.dark .text-muted,
+body.dark .footer-text,
+body.dark .hero-subtitle {
+    color: var(--text-muted) !important;
+}
+
+body.dark .stat-pill {
+    background: #020617;
+}
+
+body.dark .list-group-item a {
+    color: #bbf7d0;
+}
+
+/* ===== TOGGLE DARK MODE MINI ===== */
+
+.theme-toggle-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Checkbox disembunyikan */
+.dark-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Button kapsul MINI */
+.toggle-label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 46px;
+    height: 22px;
+    border-radius: 11px;
+    border: 1px solid var(--toggle-border);
+    padding: 2px;
+    position: relative;
+    background: transparent;
+    transition: border-color 0.28s ease, background 0.28s ease;
+}
+
+/* Track */
+.toggle-track {
+    position: absolute;
+    inset: 0;
+    border-radius: 11px;
+}
+
+/* Knob MINI */
+.toggle-knob {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--toggle-knob-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(24px); /* posisi awal: kanan (light) */
+    transition: transform 0.28s ease, background 0.28s ease;
+}
+
+/* Ikon dalam knob = lingkaran kecil (matahari / bulan) */
+.toggle-knob::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--toggle-icon-main);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
+}
+
+/* DARK MODE: knob geser kiri + bentuk bulan (efek potong) */
+.dark-checkbox:checked + .toggle-label .toggle-knob {
+    transform: translateX(0);
+}
+
+.dark-checkbox:checked + .toggle-label .toggle-knob::before {
+    box-shadow: -4px 0 0 0 var(--bg-body);
+    transform: translateX(2px);
+}
+
+/* ===== LAYOUT BARU: KONTEN KIRI + SIDEBAR KANAN ===== */
+
+.admin-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px 30px;
+}
+
+/* konten utama kiri (isi container bootstrap) */
+.admin-main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* sidebar kanan */
+.admin-sidebar-right {
+    width: 260px;
+    background: linear-gradient(180deg, var(--ishlah-green), var(--ishlah-green-soft));
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 16px 14px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    position: sticky;
+    top: 80px;
+}
+
+.admin-sidebar-right .sidebar-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.admin-sidebar-right .sidebar-subtitle {
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+.admin-sidebar-right .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 8px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #f9fafb;
+    font-size: 13px;
+    transition: background 0.18s ease, transform 0.08s ease;
+}
+
+.admin-sidebar-right .sidebar-link i {
+    font-size: 16px;
+    width: 18px;
+    text-align: center;
+}
+
+.admin-sidebar-right .sidebar-link:hover {
+    background: rgba(255,255,255,0.16);
+    transform: translateX(-2px);
+}
+
+.admin-sidebar-right .sidebar-link.active {
+    background: rgba(255,255,255,0.24);
+    font-weight: 600;
+}
+
+.admin-sidebar-right .sidebar-link-danger {
+    background: rgba(239, 68, 68, 0.32);
+}
+
+.admin-sidebar-right .sidebar-divider {
+    border-color: rgba(255,255,255,0.25);
+    margin: 8px 0;
+}
+
+/* Dark mode sidebar kanan */
+body.dark .admin-sidebar-right {
+    background: linear-gradient(180deg, #020617, #020617);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.6);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+    .admin-layout {
+        flex-direction: column;
+        padding-inline: 15px;
+    }
+
+    .admin-sidebar-right {
+        width: 100%;
+        position: static;
+        margin-top: -10px;
+    }
+
+    .hero-card {
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-title-text {
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .badge-mode-admin,
+    .badge-rapor {
+        font-size: .7rem;
+    }
+}
